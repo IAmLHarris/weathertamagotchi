@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya&family=Cabin&display=swap");
 
 :root {
-  --primary-color: #ad8068;
+  --primary-color: #40418d;
   --secondary-color: #ddd8dc;
   --accent1-color: #d64550;
   --accent2-color: #3f826d;
-  --accent3-color: #a37860;
+  --accent3-color: #6067a3;
   font-weight: lighter;
 }
 
-header {
+old {
+  display: none;
+  /* header {
   background-color: var(--secondary-color);
   padding: 10px;
   margin: 0px 95px 10px 95px;
@@ -34,38 +36,40 @@ header h1 {
 
 header img {
   max-width: 100px;
+} */
 }
 
 main {
   /* background-image: url("../images/basket2.png"); */
   background-size: contain;
   background-position: center;
-  max-width: 1124px;
+  max-width: 300px;
   margin: 0 auto;
-  padding: 1em;
+  /* padding: 1em; */
   background-color: var(--secondary-color);
   border: 15px solid var(--accent3-color);
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .mainSelections {
-  display: grid;
+  /* color: #3f826d; */
+  border: 15px solid var(--secondary-color);
+  border-radius: 25px;
+  /* display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(6, 100px);
+  grid-template-rows: repeat(6, 100px); */
 }
 
 .mainSelections section {
-  background-color: var(--accent2-color);
+  background-color: var(--secondary-color);
   padding: 5px;
   /* margin: 5px; */
-  border: 5px solid var(--secondary-color);
-  border-radius: 5px;
 }
 
 html {
   /* background-image: url("../images/vineyard.png"); */
   background-size: cover;
-  background-color: #ad8068;
+  background-color: #0b0c4b;
 }
 h2,
 h1,
