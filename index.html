@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather Tamagotchi!</title>
-    <link rel="stylesheet" href="styles/base.css" />
-
     <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
   </head>
 
   <body>
@@ -19,7 +18,14 @@
             <span id="current-temp"></span> &deg;F, Humidity
             <span id="humidity"></span>%.
           </p>
-
+          <img
+            src="images\sprites\foggiehappy.gif"
+            alt="a happy pixel frog named Foggie is bouncing up and down"
+          />
+          <ul class="button-container">
+            <button class="status-button" type="button">Click Me!</button>
+            <button class="status-button" type="button">Click Me!</button>
+          </ul>
           <div id="icon-wrapper">
             <img src="" alt="" id="weather-icon" />
             <p><span id="figcaption"></span></p>
@@ -33,7 +39,7 @@
     </footer>
 
     <script src="scripts/weather.js"></script>
-    <!-- <script src="scripts/lazyload.js"></script> -->
+
     <script src="scripts/fruitbox.js"></script>
   </body>
 </html>

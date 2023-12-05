@@ -61,9 +61,11 @@ main {
 }
 
 .mainSelections section {
+  display: flex;
   background-color: var(--secondary-color);
   padding: 5px;
-  /* margin: 5px; */
+  flex-direction: column;
+  align-items: center;
 }
 
 html {
@@ -83,8 +85,22 @@ p {
   font-family: "Cabin", Cabin, sans-serif;
 }
 
+.button-container {
+  padding: 0%;
+  display: flex;
+
+  justify-content: center;
+}
+
+button {
+  margin: 3px;
+  color: #d64550;
+  font-family: "Cabin", Cabin, sans-serif;
+}
+
 footer {
   background-color: var(--secondary-color);
-  margin: 10px 95px 0px 95px;
+  margin: 0 auto;
   text-align: center;
+  max-width: 300px;
 }
