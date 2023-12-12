@@ -1,12 +1,47 @@
-const requestURL =
-  "https://api.openweathermap.org/data/2.5/weather?lat=33.1581&lon=-117.3506&appid=9e972cb2fc69ed1c08d9704b40ffe53e&units=imperial";
-
 // const requestURL2 =
 //   "https://api.openweathermap.org/data/2.5/forecast?q=Carlsbad&appid=9e972cb2fc69ed1c08d9704b40ffe53e&units=imperial";
 
-const cards = document.querySelector(".buiscards");
 // [-33.4569, -70.6483]
 //
+
+async function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+const x = document.getElementById("demo");
+
+function showPosition(position) {
+  x.innerHTML =
+    "Latitude: " +
+    position.coords.latitude +
+    "<br>Longitude: " +
+    position.coords.longitude;
+}
+
+navigator.geolocation.getCurrentPosition(readPosition);
+
+function readPosition(position) {
+  let girlLat = String(position.coords.latitude).slice(0, -3);
+  let girlLon = String(position.coords.longitude).slice(0, -3);
+
+  console.log(girlLat);
+  console.log(girlLon);
+}
+
+function latPosition(position) {
+  let deli = String(position.coords.latitude).slice(0, -3);
+  return deli;
+}
+
+console.log(navigator.geolocation.getCurrentPosition(latPosition));
+
+const requestURL = `https://api.openweathermap.org/data/2.5/weather?lat=33.1581&lon=-117.3506&appid=9e972cb2fc69ed1c08d9704b40ffe53e&units=imperial`;
+
+// const girlpos =
 
 async function apiFetch() {
   try {
