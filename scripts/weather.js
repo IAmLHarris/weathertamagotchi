@@ -4,6 +4,8 @@
 // [-33.4569, -70.6483]
 //
 
+localStorage.removeItem("userLat");
+
 async function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -30,14 +32,17 @@ function readPosition(position) {
 
   console.log(girlLat);
   console.log(girlLon);
+  localStorage.setItem("userLat", girlLat);
+  localStorage.setItem("userLon", girlLon);
 }
 
-function latPosition(position) {
-  let deli = String(position.coords.latitude).slice(0, -3);
-  return deli;
-}
+console.log(localStorage.getItem("userLat"));
+// async function latPosition(position) {
+//   const deli = position.coords.latitude;
+//   console.log(deli);
+// }
 
-console.log(navigator.geolocation.getCurrentPosition(latPosition));
+// navigator.geolocation.getCurrentPosition(latPosition);
 
 const requestURL = `https://api.openweathermap.org/data/2.5/weather?lat=33.1581&lon=-117.3506&appid=9e972cb2fc69ed1c08d9704b40ffe53e&units=imperial`;
 
