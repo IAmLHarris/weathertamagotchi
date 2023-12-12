@@ -1,53 +1,13 @@
-// const requestURL2 =
-//   "https://api.openweathermap.org/data/2.5/forecast?q=Carlsbad&appid=9e972cb2fc69ed1c08d9704b40ffe53e&units=imperial";
-
-// [-33.4569, -70.6483]
-//
-
-localStorage.removeItem("userLat");
-
-async function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-const x = document.getElementById("demo");
-
-function showPosition(position) {
-  x.innerHTML =
-    "Latitude: " +
-    position.coords.latitude +
-    "<br>Longitude: " +
-    position.coords.longitude;
-}
-
-navigator.geolocation.getCurrentPosition(readPosition);
-
-function readPosition(position) {
-  let girlLat = String(position.coords.latitude).slice(0, -3);
-  let girlLon = String(position.coords.longitude).slice(0, -3);
-
-  console.log(girlLat);
-  console.log(girlLon);
-  localStorage.setItem("userLat", girlLat);
-  localStorage.setItem("userLon", girlLon);
-}
-
-console.log(localStorage.getItem("userLat"));
-// async function latPosition(position) {
-//   const deli = position.coords.latitude;
-//   console.log(deli);
-// }
-
-// navigator.geolocation.getCurrentPosition(latPosition);
-
-const requestURL = `https://api.openweathermap.org/data/2.5/weather?lat=33.1581&lon=-117.3506&appid=9e972cb2fc69ed1c08d9704b40ffe53e&units=imperial`;
+const requestURL = `https://api.openweathermap.org/data/2.5/weather?lat=${localStorage.getItem(
+  "userLat"
+)}&lon=${localStorage.getItem(
+  "userLon"
+)}&appid=9e972cb2fc69ed1c08d9704b40ffe53e&units=imperial`;
 
 // const girlpos =
 
+console.log(localStorage.getItem("userLat"));
+console.log(localStorage.getItem("userLon"));
 async function apiFetch() {
   try {
     const response = await fetch(requestURL);
