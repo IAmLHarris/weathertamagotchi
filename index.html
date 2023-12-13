@@ -14,7 +14,21 @@
   <body>
     <main>
       <div class="mainSelections">
-        <section>
+        <section id="boxFoggie">
+          <img
+            src="images/sprites/foggiebox.png"
+            alt="a happy pixel frog named Foggie is sitting in a box, waiting"
+          />
+
+          <p>
+            Foggie needs to see where he is before he's comfortable leaving his
+            box.
+          </p>
+          <button class="status-button" onclick="startWeather()">
+            Start Weather!
+          </button>
+        </section>
+        <section id="activeFoggie">
           <p>
             Temperature
             <span id="current-temp"></span> &deg;F, Humidity
@@ -26,7 +40,6 @@
           />
           <ul class="button-container">
             <button class="status-button">Location!</button>
-            <button class="status-button" type="button">Click Me!</button>
           </ul>
           <div id="icon-wrapper">
             <img src="" alt="" id="weather-icon" />
