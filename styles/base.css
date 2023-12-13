@@ -4,7 +4,7 @@
   --primary-color: #40418d;
   --secondary-color: #ddd8dc;
   --accent1-color: #d64550;
-  --accent2-color: #3f826d;
+  --accent2-color: #1cb45b;
   --accent3-color: #6067a3;
   font-weight: lighter;
 }
@@ -15,7 +15,7 @@ main {
   background-position: center;
   max-width: 300px;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 20px;
   /* padding: 1em; */
   background-color: var(--secondary-color);
   border: 15px solid var(--accent3-color);
@@ -69,7 +69,7 @@ p {
 
 button {
   margin: 3px;
-  color: #d64550;
+  color: var(--accent2-color);
   font-family: "Cabin", Cabin, sans-serif;
 }
 

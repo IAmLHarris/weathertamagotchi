@@ -8,8 +8,6 @@ async function getLocation() {
   }
 }
 
-// const x = document.getElementById("demo");
-
 function showPosition(position) {
   x.innerHTML =
     "Latitude: " +
@@ -27,11 +25,3 @@ function readPosition(position) {
   localStorage.setItem("userLat", girlLat);
   localStorage.setItem("userLon", girlLon);
 }
-
-console.log(localStorage.getItem("userLat"));
-// async function latPosition(position) {
-//   const deli = position.coords.latitude;
-//   console.log(deli);
-// }
-
-// navigator.geolocation.getCurrentPosition(latPosition);
