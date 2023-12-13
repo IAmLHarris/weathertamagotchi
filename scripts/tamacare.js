@@ -38,6 +38,11 @@ function foggieFan(temp, humi) {
 
 function foggieWater(temp, humi) {
   let waterHumi = humi * 1 + 30;
+
+  if (waterHumi >= 100) {
+    waterHumi = 100;
+  } else {
+  }
   localStorage.setItem("foggieHumi", waterHumi);
   console.log(`watr func ${localStorage.getItem("foggieHumi")}`);
   foggieChecker(temp, waterHumi);
