@@ -4,6 +4,7 @@ const foggieHumi = localStorage.getItem("foggieHumi");
 function foggieChecker(foggieTemp, foggieHumi) {
   let foggieFeels = foggieTemp * (foggieHumi / 100);
 
+  console.log(`foggie feels like it's ${foggieFeels}`);
   if (foggieFeels > 50) {
     if (foggieFeels > 85) {
       console.log("it's hot");
@@ -25,19 +26,19 @@ function foggieLamp(temp, humi) {
   let lampTemp = temp * 1 + 20;
   localStorage.setItem("foggieTemp", lampTemp);
   console.log(`lamp func ${localStorage.getItem("foggieTemp")}`);
-  foggieChecker(temp, humi);
+  foggieChecker(lampTemp, humi);
 }
 
 function foggieFan(temp, humi) {
   let fanTemp = temp * 1 - 15;
   localStorage.setItem("foggieTemp", fanTemp);
   console.log(`fan func ${localStorage.getItem("foggieTemp")}`);
-  foggieChecker(temp, humi);
+  foggieChecker(fanTemp, humi);
 }
 
 function foggieWater(temp, humi) {
   let waterHumi = humi * 1 + 30;
   localStorage.setItem("foggieHumi", waterHumi);
   console.log(`watr func ${localStorage.getItem("foggieHumi")}`);
-  foggieChecker(temp, humi);
+  foggieChecker(temp, waterHumi);
 }
